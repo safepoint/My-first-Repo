@@ -1,0 +1,120 @@
+wicky:~ patrick$ cd Documents/
+wicky:Documents patrick$ mkdir My-First-Repo
+wicky:Documents patrick$ cd My-First-Repo/
+wicky:My-First-Repo patrick$ ls
+wicky:My-First-Repo patrick$ git init
+Initialized empty Git repository in /Users/patrick/Documents/My-First-Repo/.git/
+wicky:My-First-Repo patrick$ touch LEESMIJ
+wicky:My-First-Repo patrick$ gitt add LEESMIJ 
+-bash: gitt: command not found
+wicky:My-First-Repo patrick$ git commit -m 'first commit' 
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	LEESMIJ
+nothing added to commit but untracked files present (use "git add" to track)
+wicky:My-First-Repo patrick$ git add LEESMIJ 
+wicky:My-First-Repo patrick$ git commit -m 'first commit' 
+[master (root-commit) b113221] first commit
+ 0 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 LEESMIJ
+wicky:My-First-Repo patrick$ git remote add origin git@github.com:safepoint/My-first-Repo.git
+wicky:My-First-Repo patrick$ git push -u origin master
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 215 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:safepoint/My-first-Repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+wicky:My-First-Repo patrick$ ls -l
+total 0
+-rw-r--r--  1 patrick  patrick  0 23 nov 20:10 LEESMIJ
+wicky:My-First-Repo patrick$ vi LEESMIJ 
+wicky:My-First-Repo patrick$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   LEESMIJ
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+wicky:My-First-Repo patrick$ vi .gitignore
+wicky:My-First-Repo patrick$ touch test.swp
+wicky:My-First-Repo patrick$ ls -l
+total 8
+-rw-r--r--  1 patrick  patrick  68 23 nov 20:48 LEESMIJ
+-rw-r--r--  1 patrick  patrick   0 23 nov 20:49 test.swp
+wicky:My-First-Repo patrick$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   LEESMIJ
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+no changes added to commit (use "git add" and/or "git commit -a")
+wicky:My-First-Repo patrick$ git add .gitignore 
+wicky:My-First-Repo patrick$ ls -l
+total 8
+-rw-r--r--  1 patrick  patrick  68 23 nov 20:48 LEESMIJ
+-rw-r--r--  1 patrick  patrick   0 23 nov 20:49 test.swp
+wicky:My-First-Repo patrick$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   .gitignore
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   LEESMIJ
+#
+wicky:My-First-Repo patrick$ git commit -m "wat wijzigingen gemaakt in LEESMIJ en gitignore aangemaakt"
+[master a66c806] wat wijzigingen gemaakt in LEESMIJ en gitignore aangemaakt
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+wicky:My-First-Repo patrick$ git put
+git: 'put' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	pull
+	push
+wicky:My-First-Repo patrick$ git push
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:safepoint/My-first-Repo.git
+   b113221..a66c806  master -> master
+wicky:My-First-Repo patrick$ ls -l
+total 8
+-rw-r--r--  1 patrick  patrick  68 23 nov 20:48 LEESMIJ
+-rw-r--r--  1 patrick  patrick   0 23 nov 20:49 test.swp
+wicky:My-First-Repo patrick$ git add LEESMIJ 
+wicky:My-First-Repo patrick$ git commit -m "wat wijzigingen gemaakt in LEESMIJ, want eerdere zijn niet doorgekomen"
+[master 86d7482] wat wijzigingen gemaakt in LEESMIJ, want eerdere zijn niet doorgekomen
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+wicky:My-First-Repo patrick$ git push
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 395 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:safepoint/My-first-Repo.git
+   a66c806..86d7482  master -> master
