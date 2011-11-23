@@ -1,4 +1,4 @@
 Dit is nog zo'n onzin bestand met tekst.
 
-Hmm, misschien snap git toch niet zo goed als ik dacht.
+Hmm, misschien snap ik git toch niet zo goed als ik dacht.
 

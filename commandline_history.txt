@@ -1,0 +1,64 @@
+  506   git config --global user.name "Patrick Hoogendijk"
+  507  git config --global user.email patrick@safepoint.nl
+  508  ls -l
+  509  cd .
+  510  cd
+  511  ls
+  512  cd Documents/
+  513  mkdir My-First-Repo
+  514  cd My-First-Repo/
+  515  ls
+  516  git init
+  517  touch LEESMIJ
+  518  gitt add LEESMIJ 
+  519  git commit -m 'first commit' 
+  520  git add LEESMIJ 
+  521  git commit -m 'first commit' 
+  522  git remote add origin git@github.com:safepoint/My-first-Repo.git
+  523  git push -u origin master
+  524  ls -l
+  525  vi LEESMIJ 
+  526  git status
+  527  vi .gitignore
+  528  touch test.swp
+  529  ls -l
+  530  git status
+  531  git add .gitignore 
+  532  ls -l
+  533  git status
+  534  git commit -m "wat wijzigingen gemaakt in LEESMIJ en gitignore aangemaakt"
+  535  git put
+  536  git push
+  537  ls -l
+  538  git add LEESMIJ 
+  539  git commit -m "wat wijzigingen gemaakt in LEESMIJ, want eerdere zijn niet doorgekomen"
+  540  git push
+  541  vi Dit_snap_ik_niet.txt
+  542  git add Dit_snap_ik_niet.txt 
+  543  git status
+  544  git commit -m "logging van vage actie toegevoegd in file 'Dit_snap_ik_niet' "
+  545  git push
+  546  pwd
+  547  ls -l
+  548  vi LEESMIJ 
+  549  vi test.doc
+  550  git add test.doc
+  551  git mv test.doc test.txt
+  552  ls -l
+  553  git status
+  554  git commit -m "Wat zitten freubelen met bestanden"
+  555  git push
+  556  more LEESMIJ 
+  557  vi test.txt 
+  558  git status
+  559  git commit -a -m "opnieuw committen om de aaanpassingen in github te krijgen"
+  560  git status
+  561  git push
+  562  git pull
+  563  vi LEESMIJ 
+  564  git status
+  565  bi test.txt 
+  566  vi test.txt 
+  567  ls -l
+  568  git status
+  569  history > commandline_history 
